@@ -1,0 +1,33 @@
+{
+  "name": "react2",
+  "version": "1.0.0",
+  "description": "this is my new po",
+  "main": "react.js",
+  "scripts": {
+    "test": "jest",
+    "start": "npx parcel react2.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debasish-rana/reactcourse2.git"
+  },
+  "keywords": [
+    "Project",
+    "in",
+    "react"
+  ],
+  "author": "Debasish Rana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Debasish-rana/reactcourse2/issues"
+  },
+  "homepage": "https://github.com/Debasish-rana/reactcourse2#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
