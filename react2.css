@@ -1,0 +1,40 @@
+.header{
+          display: flex;
+          justify-content: space-between;
+         border: 3px solid black;
+         border-radius: 5px;
+}
+.logo img{
+          height:100px;
+          width: 150px;
+}
+.list-item ul{
+          display: flex;
+
+}
+.list-item ul li{
+          margin: 10px;
+          list-style: none;
+          padding:15px;
+}
+ .res-card{
+          padding: 10px;
+          width: 200px;
+          height: auto;
+          border-radius: 10px;
+          margin: 5px;
+}
+        
+.image{
+          margin: 5px;
+          height: 130px;
+          width: 190px;
+          border-top: 5px;
+}
+.rescontainer{
+          display: flex;
+          flex-wrap: wrap;
+}
+.filtered-btn button {
+          margin: 10px;
+}
