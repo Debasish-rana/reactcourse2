@@ -17,14 +17,18 @@
           list-style: none;
           padding:15px;
 }
+.list-item ul button{
+          margin: 10px;
+}
+
  .res-card{
           padding: 10px;
           width: 200px;
           height: auto;
-          border-radius: 10px;
+          border-radius: 5px;
           margin: 5px;
 }
-        
+  
 .image{
           margin: 5px;
           height: 130px;
@@ -38,3 +42,15 @@
 .filtered-btn button {
           margin: 10px;
 }
+.shimer-container{
+          display: flex;
+          flex-wrap: wrap;
+}
+.shimer-container .shimer-crd {
+          padding: 10px;
+          width: 200px;
+          height:400px;
+          border-radius: 5px;
+          margin: 5px; 
+         background-color: #f0f0f0; 
+       }
