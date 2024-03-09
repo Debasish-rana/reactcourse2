@@ -1,12 +1,13 @@
 import RestrurentCard from "./RestrurentCard";
-import resList from "./util/resList";
+//import resList from "./util/resList";
 import { useState, useEffect } from "react";
 import ShimerUi from "./shimerui";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestrurent, setReslist] = useState([]);
 
-const [filteredRestrurent, setFilteredReslist] = useState([])
+  const [filteredRestrurent, setFilteredReslist] = useState([]);
 
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
@@ -23,14 +24,11 @@ const [filteredRestrurent, setFilteredReslist] = useState([])
     console.log(json);
 
     setReslist(
-      json.data.cards[1].card.card.gridElements.infoWithStyle
-        .restaurants
+      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
- setFilteredReslist(
-  json.data.cards[1].card.card.gridElements.infoWithStyle
-        .restaurants
- );
-
+    setFilteredReslist(
+      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+    );
   };
   if (listOfRestrurent.length === 0) {
     return <ShimerUi />;
@@ -46,17 +44,17 @@ const [filteredRestrurent, setFilteredReslist] = useState([])
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
-              
             }}
           />
           <button
             onClick={() => {
               console.log(searchText);
-              const filteredRestrurent = listOfRestrurent.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase())) 
+              const filteredRestrurent = listOfRestrurent.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
 
-              setFilteredReslist(filteredRestrurent)
-            }
-            }
+              setFilteredReslist(filteredRestrurent);
+            }}
           >
             Search
           </button>
@@ -69,13 +67,13 @@ const [filteredRestrurent, setFilteredReslist] = useState([])
             setFilteredReslist(filteredList);
           }}
         >
-          Top restro
+          Top Rated Restrurent
         </button>
       </div>
 
       <div className="rescontainer">
         {filteredRestrurent.map((restrurent) => (
-          <RestrurentCard key={restrurent.info.id} resDeta={restrurent} />
+          <Link className="res-text" key={restrurent.info.id} to={"/restrurant/"+ restrurent.info.id} ><RestrurentCard  resDeta={restrurent} /></Link>
         ))}
       </div>
     </div>

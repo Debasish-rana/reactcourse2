@@ -1,56 +1,136 @@
-.header{
-          display: flex;
-          justify-content: space-between;
-         border: 3px solid black;
-         border-radius: 5px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  position: sticky;
+  top: 0%;
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px #9b9898;
+  margin-bottom: 20px;
 }
-.logo img{
-          height:100px;
-          width: 150px;
+.logo img {
+  height: 100px;
+  width: 150px;
 }
-.list-item ul{
-          display: flex;
+.list-item ul {
+  display: flex;
+}
+.list-item ul li {
+  margin: 10px;
+  list-style: none;
+  padding: 10px;
+}
 
+.list-item ul button {
+  margin: 10px;
 }
-.list-item ul li{
-          margin: 10px;
-          list-style: none;
-          padding:15px;
-}
-.list-item ul button{
-          margin: 10px;
+.navtext-style{
+  text-decoration: none;
 }
 
- .res-card{
-          padding: 10px;
-          width: 200px;
-          height: auto;
-          border-radius: 5px;
-          margin: 5px;
+.res-card {
+  padding: 10px;
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin: 10px;
 }
-  
-.image{
-          margin: 5px;
-          height: 130px;
-          width: 190px;
-          border-top: 5px;
+
+.res-card:hover {
+  border: 2px solid black;
 }
-.rescontainer{
-          display: flex;
-          flex-wrap: wrap;
+
+.image {
+  margin: 5px;
+  height: 130px;
+  width: 190px;
+  border-top: 5px;
 }
-.filtered-btn button {
-          margin: 10px;
+.rescontainer {
+  display: flex;
+  flex-wrap: wrap;
 }
-.shimer-container{
-          display: flex;
-          flex-wrap: wrap;
+.filtered-btn {
+  margin-inline: 10px;
+  display: flex;
+  gap: 20px;
+}
+.shimer-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 .shimer-container .shimer-crd {
-          padding: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 400px;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: #f0f0f0;
+}
+.menu{
+ margin-left: 70px;
+ list-style: none;
+ }
+ .rating span img{
+  height: 20px;
+  width: 20px;
+
+ }
+ .menu-container{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px;
+ }
+ .rating{
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+  padding: 35px;
+  gap: 20px;
+ }
+ .offers{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 20px;
+  margin: 10px 80px;
+  border-bottom: .5px solid rgb(112, 108, 108);
+ }
+ .off{
+  display: flex;
+  border: .5px solid grey;
+  padding: 10px;
+  border-radius: 5px;
+  
+ }
+ 
+
+.food-card ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  gap: 20px;
+  
+ }
+ .food-card ul li {
+          height: auto;
           width: 200px;
-          height:400px;
-          border-radius: 5px;
-          margin: 5px; 
-         background-color: #f0f0f0; 
-       }
+          margin: 20px;
+          list-style: none;
+          
+ }
+ .food-card ul li img{
+  border-radius: 10px;
+ }
+ .food-card button{
+        padding: 10px;
+        width: 100px;
+        margin-left: 40px;
+ }
+
+ .res-text{
+  text-decoration: none;
+  color: black;
+ }
