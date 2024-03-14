@@ -73,7 +73,7 @@ const Body = () => {
 
       <div className="rescontainer">
         {filteredRestrurent.map((restrurent) => (
-          <Link className="res-text" key={restrurent.info.id} to={"/restrurant/"+ restrurent.info.id} ><RestrurentCard  resDeta={restrurent} /></Link>
+          <Link className="res-text" key={restrurent.info.id} to={"/restrurants/"+ restrurent.info.id} ><RestrurentCard  resDeta={restrurent} /></Link>
         ))}
       </div>
     </div>
