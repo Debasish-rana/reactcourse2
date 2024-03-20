@@ -156,5 +156,10 @@
   border: 2px solid black;
  }
  .class-card{
-  border: 2px solid black;
+  
+  padding: 20px;
+ }
+ .class-card img{
+  height: 160px;
+  width: 200px;
  }
