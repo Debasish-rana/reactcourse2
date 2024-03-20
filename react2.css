@@ -151,3 +151,10 @@
   border: none;
   background-color:white;
  }
+ .user-card{
+  padding: 10px;
+  border: 2px solid black;
+ }
+ .class-card{
+  border: 2px solid black;
+ }

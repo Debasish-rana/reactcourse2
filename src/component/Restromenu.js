@@ -36,7 +36,7 @@ const Restromenu = () => {
     name,
     cuisines,
     locality,
-    costForTwo,
+    costForTwo, 
     avgRating,
     totalRatingsString,
   } = restroInfo?.cards[0]?.card?.card?.info;
