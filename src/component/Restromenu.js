@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import ShimerUi from "./shimerui";
-import { MENU_URL } from "./util/urls";
+import { MENU_URL } from "../util/urls";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "./util/urls";
+import useRestrurentMenu from "../util/useRestroMenuHook";
 const Restromenu = () => {
-  const [restroInfo, setRestroInfo] = useState(null);
+  
   const [expand, setExpand] = useState(
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,17 +19,8 @@ const Restromenu = () => {
 
   const { resId } = useParams();
 
-  useEffect(() => {
-    restroMenuDeta();
-  }, []);
+  const restroInfo = useRestrurentMenu(resId)
 
-  const restroMenuDeta = async () => {
-    const deta = await fetch(MENU_API + resId);
-
-    const json = await deta.json();
-    console.log(json);
-    setRestroInfo(json.data);
-  };
   if (restroInfo === null) return <ShimerUi />;
 
   const {

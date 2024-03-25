@@ -6,7 +6,11 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import Restromenu from "./component/Restromenu";
+//import Grocery from "./component/Grocery"; for create separate js file
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+
 
 const AppLayout = () => {
   return (
@@ -16,6 +20,9 @@ const AppLayout = () => {
     </div>
   );
 };
+
+const Grocery = lazy(()=> import("./component/Grocery"))
+
 
 const appRouter = createBrowserRouter([
   {
@@ -33,6 +40,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/grocery",
+        element: <Suspense><Grocery /></Suspense>,
       },
       {
         path:"/restrurants/:resId",

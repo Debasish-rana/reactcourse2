@@ -3,6 +3,7 @@ import RestrurentCard from "./RestrurentCard";
 import { useState, useEffect } from "react";
 import ShimerUi from "./shimerui";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../util/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestrurent, setReslist] = useState([]);
@@ -30,6 +31,13 @@ const Body = () => {
       json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+
+ const onlineStatus = useOnlineStatus()
+ 
+  if (onlineStatus === false) {
+     return <h1>Looks like offfline!! pleace check your internet connection </h1>
+   }
+  
   if (listOfRestrurent.length === 0) {
     return <ShimerUi />;
   }
